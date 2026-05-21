@@ -134,3 +134,4 @@ exports.getAllProductsService = async (filters) => {
     totalPages: Math.ceil(totalCount / resPerPage),
   };
 };
+// fixed the logics here 
