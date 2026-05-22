@@ -15,7 +15,7 @@ const registerNewUser = async ({ name, email, password, image }) => {
     password,
     image: image || undefined, // If no image is provided, Mongoose default will take over
   });
-
+  // s
   if (user) {
     return {
       _id: user._id,
@@ -93,4 +93,10 @@ const updateUserProfile = async (userId, updateData) => {
   };
 };
 
-module.exports = { registerNewUser, authenticateUser, getUserById, logoutUser,updateUserProfile };
+module.exports = {
+  registerNewUser,
+  authenticateUser,
+  getUserById,
+  logoutUser,
+  updateUserProfile,
+};
