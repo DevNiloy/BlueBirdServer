@@ -11,7 +11,7 @@ const {
 
 // middleware (auth protect লাগবে)
 const { protect } = require("../middlewares/authMiddleware");
-// const upload = require("../middleware/uploadMiddleware"); // multer থাকলে
+const upload = require("../config/multer"); // multer থাকলে
 
 // ======================
 // Public Routes
@@ -24,6 +24,6 @@ router.post("/logout", logout);
 // Protected Routes
 // ======================
 router.get("/me", protect, getMe);
-// router.put("/me", protect, upload.single("image"), updateMe);
+router.put("/me", protect, upload.single("image"), updateMe);
 
 module.exports = router;
